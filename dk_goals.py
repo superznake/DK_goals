@@ -48,4 +48,4 @@ def others(goal, name: Minister):
     return goal
 
 
-print(create())
+# print(create())
