@@ -29,7 +29,7 @@ def create():
 
 def prime(goal):
     base_set = {1, 2, 3, 4}
-    values_set = {-3, -2, -1, 0, 1, 2, 3}
+    values_set = {-1, 0, 1}
     e = random.choice(list(base_set))
     goal[e - 1] = 0
     base_set.remove(e)
