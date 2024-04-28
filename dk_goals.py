@@ -3,20 +3,22 @@ from enum import Enum
 
 
 class Minister(Enum):
+    KING = 0
     ARMY = 1
     ECONOMY = 2
     RELIGION = 3
     SOCIETY = 4
+    PRIME = 5
 
 
 def create():
     buffk, buffp, buff1, buff2, buff3, buff4 = [None] * 4, [None] * 4, [None] * 4, [None] * 4, [None] * 4, [None] * 4
-    goals = {"king": buffk, "prime": buffp, Minister.ARMY: buff1, Minister.ECONOMY: buff2, Minister.RELIGION: buff3, Minister.SOCIETY: buff4}
+    goals = {Minister.KING: buffk, Minister.PRIME: buffp, Minister.ARMY: buff1, Minister.ECONOMY: buff2, Minister.RELIGION: buff3, Minister.SOCIETY: buff4}
     for goal in goals.keys():
-        if goal == "king":
+        if goal == Minister.KING:
             goals[goal] = [0] * 4
             # print(goal, "k")
-        elif goal == "prime":
+        elif goal == Minister.PRIME:
             goals[goal] = prime(goals[goal])
             # print(goal, "p")
         else:
